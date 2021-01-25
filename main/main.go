@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/dhuezx/urlshort/urlshort"
 	"net/http"
-
-	"github.com/dhuezx/urlshort"
 )
 
 func main() {
