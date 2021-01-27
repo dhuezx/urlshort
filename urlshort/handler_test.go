@@ -10,7 +10,7 @@ import (
 var (
 	fallbackResponse = "fallback"
 	path             = "/test"
-	url             = "https://test.com"
+	url              = "https://test.com"
 )
 
 func TestMapHandler(t *testing.T) {
@@ -20,6 +20,23 @@ func TestMapHandler(t *testing.T) {
 	// Act
 	t.Run("it redirects to correct url", func(t *testing.T) {
 		result := runMapHandler(pathToUrls, path)
+
+		// Assert
+		assertStatus(t, result, http.StatusFound)
+		assertURL(t, result, url)
+	})
+}
+
+func TestYAMLHandler(t *testing.T) {
+	// Arrange
+	yaml := `
+- path: /test
+  url: https://test.com
+`
+
+	t.Run("it redirects to correct url", func(t *testing.T) {
+		// Act
+		result := runYAMLHandler([]byte(yaml), path)
 
 		// Assert
 		assertStatus(t, result, http.StatusFound)
@@ -44,6 +61,21 @@ func runMapHandler(pathToUrls map[string]string, path string) *http.Response {
 func createMapHandler(pathToUrls map[string]string) http.HandlerFunc {
 	fallbackHandler := http.HandlerFunc(fallback)
 	return MapHandler(pathToUrls, fallbackHandler)
+}
+
+func runYAMLHandler(yaml []byte, path string) *http.Response {
+	request, _ := http.NewRequest(http.MethodGet, path, nil)
+	response := httptest.NewRecorder()
+
+	YAMLHandler, _ := createYAMLHandler(yaml)
+	YAMLHandler(response, request)
+
+	return response.Result()
+}
+
+func createYAMLHandler(yaml []byte) (http.HandlerFunc, error) {
+	fallbackHandler := http.HandlerFunc(fallback)
+	return YAMLHandler(yaml, fallbackHandler)
 }
 
 func assertStatus(t *testing.T, resp *http.Response, want int) {

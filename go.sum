@@ -1,0 +1,12 @@
+github.com/DennisVis/urlshort v0.0.0-20180819174551-927cdd178e5b h1:WP7TzEK28KZEttI3en1GyU/x7aSP14xJvMiCu2oj3kY=
+github.com/DennisVis/urlshort v0.0.0-20180819174551-927cdd178e5b/go.mod h1:sfAM9eLhi6oXwG2LIMMwuR56UAANzRDoMIIkpNuQWAU=
+github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
+github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
+github.com/gophercises/urlshort v0.0.0-20190723121003-cc800dbaf411 h1:jXluXk94Xa6OHiVJFuYsJFrCvcc87iAdOQMy6BCkQiw=
+github.com/gophercises/urlshort v0.0.0-20190723121003-cc800dbaf411/go.mod h1:uSADXLeo9rvYEF7fbNcZ9/84Tk8j3gggJ/ha5iO21MI=
+golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c h1:VwygUrnw9jn88c4u8GD3rZQbqrP/tgas88tPUbBxQrk=
+golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.4.0 h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=
+gopkg.in/yaml.v2 v2.4.0/go.mod h1:RDklbk79AGWmwhnvt/jBztapEOGDOx6ZbXqjP6csGnQ=

@@ -39,7 +39,7 @@ func TestMapHandler(t *testing.T) {
 
 func TestYAMLHandler(t *testing.T) {
 	yaml := fmt.Sprintf(`
-  - path: %s
+- path: %s
     url: %s
   `, path, dest)
 
